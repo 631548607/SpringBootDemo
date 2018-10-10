@@ -1,0 +1,12 @@
+body{
+    background: darkgray;
+}
+.box{
+    margin: 5px;
+    background-color: white;
+    float: left;
+}
+.box .desc{
+    background-color: white;
+    height: 60px;
+}

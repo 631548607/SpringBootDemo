@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.2.1.js"></script>
+    <link  rel="stylesheet" href="../css/demo1.css" type="text/css" >
+    <title>demo1</title>
+</head>
+<body>
+    <div class="box">
+        <img class="img" src="../images/1.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/2.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/3.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/4.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/5.jpeg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/6.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/7.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/8.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/9.jpeg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/10.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/11.jpeg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/12.jpg">
+        <div class="desc">Description</div>
+    </div>
+    <div class="box">
+        <img class="img" src="../images/13.jpg">
+        <div class="desc">Description</div>
+    </div>
+</body>
+<script>
+    $(function () {
+        var boxArr = $(".box"),
+            num =  Math.floor((document.body.clientWidth / boxArr.eq(0).outerWidth(0))),
+            columnHeightArr = [];
+9
+        columnHeightArr.length = num;
+        boxArr.each(function (index, item) {
+            if (index < num) {
+                columnHeightArr[index] = $(item).position().top + $(item).outerHeight(true);
+            } else {
+                var minHeight = Math.min.apply(null, columnHeightArr),
+                    minHeightIndex = $.inArray(minHeight,columnHeightArr);
+
+                $(item).css({
+                    position: 'absolute',
+                    top: minHeight,
+                    left: boxArr.eq(minHeightIndex).position().left
+                });
+                columnHeightArr[minHeightIndex] += $(item).outerHeight(true);
+
+            }
+       ; })
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/MasonryDemo.css"/>
+    <title>MasonryDemo</title>
+</head>
+<body>
+<div id="masonry"  class="container-fluid">
+    <div class="box">
+        <img src="../images/1.jpg">
+    </div>
+</div>
+
+</body>
+<script>
+    $(function () {
+        $("#masonry").masonry({
+            itemSelector: '.box',
+            gutter: 10,
+            columnWidth: 200,
+            isAnimated: true,
+            horizontalOrder: true,
+        });
+    });
+</script>
+</html>

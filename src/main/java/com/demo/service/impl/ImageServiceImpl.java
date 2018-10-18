@@ -1,8 +1,8 @@
-package com.demo.hc.service.impl;
+package com.demo.service.impl;
 
-import com.demo.hc.mapper.ImageinfoDAO;
-import com.demo.hc.model.ImageInfoModel;
-import com.demo.hc.service.ImageService;
+import com.demo.mapper.ImageinfoDAO;
+import com.demo.model.ImageInfoModel;
+import com.demo.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

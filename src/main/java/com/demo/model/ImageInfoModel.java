@@ -1,4 +1,4 @@
-package com.demo.hc.model;
+package com.demo.model;
 
 import java.io.Serializable;
 import java.util.Date;

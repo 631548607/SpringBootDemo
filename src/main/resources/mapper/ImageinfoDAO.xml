@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.hc.mapper.ImageinfoDAO">
-  <resultMap id="BaseResultMap" type="com.demo.hc.model.ImageInfoModel">
+<mapper namespace="com.demo.mapper.ImageinfoDAO">
+  <resultMap id="BaseResultMap" type="com.demo.model.ImageInfoModel">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="path" jdbcType="VARCHAR" property="path" />
@@ -22,7 +22,7 @@
     delete from imageinfo
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.demo.hc.model.ImageInfoModel">
+  <insert id="insert" parameterType="com.demo.model.ImageInfoModel">
     insert into imageinfo (id, `name`, `path`, 
       createtime, isvalid, `timestamp`
       )
@@ -30,7 +30,7 @@
       #{createtime,jdbcType=TIMESTAMP}, #{isvalid,jdbcType=INTEGER}, #{timestamp,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.demo.hc.model.ImageInfoModel">
+  <insert id="insertSelective" parameterType="com.demo.model.ImageInfoModel">
     insert into imageinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.hc.model.ImageInfoModel">
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.model.ImageInfoModel">
     update imageinfo
     <set>
       <if test="name != null">
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.hc.model.ImageInfoModel">
+  <update id="updateByPrimaryKey" parameterType="com.demo.model.ImageInfoModel">
     update imageinfo
     set `name` = #{name,jdbcType=VARCHAR},
       `path` = #{path,jdbcType=VARCHAR},

@@ -1,7 +1,6 @@
-package com.demo.hc.service;
+package com.demo.service;
 
-import com.demo.hc.model.ImageInfoModel;
-import org.springframework.stereotype.Service;
+import com.demo.model.ImageInfoModel;
 
 /**
  * Created by HC on 2018/10/17.

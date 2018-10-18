@@ -1,4 +1,4 @@
-package com.demo.hc.mapper;
+package com.demo.mapper;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
-package com.demo.hc.mapper;
+package com.demo.mapper;
 
-import com.demo.hc.model.ImageInfoModel;
+import com.demo.model.ImageInfoModel;
 import org.springframework.stereotype.Repository;
 
 /**
